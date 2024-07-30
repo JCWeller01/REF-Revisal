@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FillInPersonsInformation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FillInPersonsInformation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Angajati" Type="InArgument(sd:DataRow)" />
     <x:Property Name="out_Success" Type="OutArgument(x:Boolean)" />
@@ -6,10 +6,10 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1099.2,2100.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>636,2398.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FillInPersonsInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -43,10 +43,17 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-    </sco:Collection>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="98">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="106">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -96,27 +103,34 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FillInPersonsInformation" sap:VirtualizedContainerService.HintSize="1044.8,2036" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FillInPersonsInformation" sap:VirtualizedContainerService.HintSize="592,2333.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="982.4,1912.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="529.6,2210.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="948.8,1612" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1909.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Text" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="886.4,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;Nume&quot;).ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(1).ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="422, 246, 438, 29" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl automationid='Entity_Nume' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Entity_Nume' role='editable text' /&gt;" Guid="7e04536b-c65e-425d-9277-d65fb76318e0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAhCAYAAACvIW6xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADGSURBVHhe7dUxCsJAAERR738VsfJgmzrNygoJWMQ+n/dguun/YwJAmNABkHaG7vl6m5mZZXb4Cd0Y29z33czM7LZbLbsM3ToAwJ2tlgkdAFlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApP0N3Rjb92BmZnbXrZZdhs7MzKyywxk6ACgSOgDC5vwAtBJrgFsRVaYAAAAASUVORK5CYII=" InformativeScreenshot="1d9586a985611adc27a3edb1961ebe06.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -127,7 +141,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Prenume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="886.4,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;Prenume&quot;).ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Prenume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;Prenume&quot;).ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="422, 280, 438, 29" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl automationid='Entity_Prenume' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Entity_Prenume' role='editable text' /&gt;" Guid="c984a383-e7a7-4d25-9d20-37b70c00e287" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAhCAYAAACvIW6xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADGSURBVHhe7dUxCsJAAERR738VsfJgmzrNygoJWMQ+n/dguun/YwJAmNABkHaG7vl6m5mZZXb4Cd0Y29z33czM7LZbLbsM3ToAwJ2tlgkdAFlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApP0N3Rjb92BmZnbXrZZdhs7MzKyywxk6ACgSOgDC5vwAtBJrgFsRVaYAAAAASUVORK5CYII=" InformativeScreenshot="7b7dde988eb3fbd5fade95c56bede9c5.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -138,7 +152,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CNP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="886.4,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;CNP&quot;).ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CNP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;CNP&quot;).ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="422, 447, 438, 21" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text Entity_Cnp'" FullSelectorArgument="&lt;ctrl automationid='Entity_Cnp' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Entity_Cnp' role='editable text' /&gt;" Guid="c7241dff-2e2a-4356-a4b0-64531be05e0a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAZCAYAAABHCOtxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAClSURBVHhe7d0hDsMwEEXB3v8qVVEPlmITVwaJVNBwP81Ijy3/cB8TAMIMHQBp19A9X29JkjKdfobuOD5zjCFJ0ratLfs7dOsAAHa2tszQAZBl6ABIM3QApBk6ANIMHQBphg6ANEMHQJqhAyDN0AGQZugASDN0AKQZOgDSDB0AaYYOgDRDB0CaoQMg7XbofBiXJO3e7YdxSZIqna6hA4AiQwdA2JxfbjRvl/qGjxIAAAAASUVORK5CYII=" InformativeScreenshot="d649c416579978a21bed60c2e9e2a0f0.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -149,7 +163,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Continuare &gt;&gt;'" sap:VirtualizedContainerService.HintSize="886.4,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Continuare &gt;&gt;'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="1668, 976, 125, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Continuare &gt;&gt;'" FullSelectorArgument="&lt;ctrl automationid='MoveNext' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MoveNext' role='push button' check:text='Continuare &amp;gt;&amp;gt;' /&gt;" Guid="dfa5a964-5024-48be-957d-ff35058eea9e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAApCAYAAAAS70rTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALBSURBVHhe7Zw7ciIxEIYnI+MiHMARpyB1shEpKcGegBuQOSDgBCSbEDshIaAKzqLVc6bV6hkJW7PlZX5VfWWs0ejR/UnCiRuFMvkCCVA6CTabDZgYoUQSXC4X9Xg8wItj8twrgfQCeD3u9zskmDqQAEACAAmABhIASAAgAdAMSmAeSi+B1wISAEgAIAHQjCjBUa3njWoawmqvrmLbWvgxRx/ntRhHguNazXXSV/srqT+r3a/f6nQj7b7JebdUMyT829SX4LxTy9lCbU83+XlFIEEdqktwXM8Lj2N9Mixn5LqIxbEJXmzV6eBOFdvG/G5PEv5uoxbbk7r5evdZt2uFPJCriY7D2nvMGmidnQsZi55wYb0f5id9Zsfu3uFjcI7rt7KNo0/Zt0xfz1JZgk8b1PgakHB3dxQYe4V0CWoD3wqVvpOeBJIEJgkrtb+6NjZpTCaeoFgC3YZeY3aerD8mRnoaurkPx8XNhc61jxCbfJzLqCzBH73YeEdLtLucfT+gwXcLjQPCk14qQZqg0G+JBByT0G6NsVQO6f10rn34L7dCfDhOwHy8c4wgQd5QO3khIDRQ9jMLBK8rk4AFKaorlcAnxh/tNPDpWsKOpu09BYlt8QLnr9YwXv4E6aOyBO466N9FDmmnGH6kBMlfOsJJMDSHL2D7jMbswc8tL8owlSXQsDtTQkqwgQb/30ggCRn3kT7PSSDX5XHjliTfrrtC8gP1JdDYICR3lV5k+wXLHa9RcJk8xRJEbZ6XwAWUjasDHPrgY/C1iQm3Y7Bk6vW9DyTX9JPd+QYTp0rJD4wigSUcVYR4kfyejU+PNMFSXdeHS9rzEtAdGPo56IS0fbDnq/1H9iSw8PWztfwkxpMA/DdAAgAJgAMSAEgAIAHQQAIACQAkABpIAPolwH8qmQaD/6kETItQWglQplsgweSLUn8BsBJb0vPpQzAAAAAASUVORK5CYII=" InformativeScreenshot="3be4f8471f590aab390f938845175f57.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -160,53 +174,54 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Atentie'" sap:VirtualizedContainerService.HintSize="886.4,476" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V3">
-              <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,196" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,368" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <uix:NGetText DisplayName="Get Text 'CNP invalid.'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" TextString="[Text]" Timeout="[1s]" Version="V3">
+                  <uix:NGetText.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="22, 51, 387, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'CNP invalid.'" FullSelectorArgument="&lt;ctrl name='CNP invalid. Vreti totusi sa continuati?' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl role='text' automationid='' /&gt;" Guid="416ddcb0-985a-4606-a02e-fee33d51d7f8" InformativeScreenshot="9971782724f8991b4a71cb61d5a3de5f.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='Atentie' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target DesignTimeRectangle="153, 89, 62, 38" ElementType="Button" FriendlyName="'Da'" FullSelectorArgument="&lt;ctrl name='Da' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Da' role='push button' automationid='' check:text='Da' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAqCAYAAAAH843fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE3SURBVGhD7ZqxjYQwEEUpgALogE5IaOF6AIkqNiQguiKQqIEcEjKoZdaYb9YsEO3dYuE/0pPAYwfz8NgJgTB0UARiFZHnuZeY2Ijo+16mafKCudZTEeM4Hi66I3OtFKGgCEARgCIARQCKABQBKAJQBKAIQBHgAhGdVGkgQfBGmEjZHs3/DheJCCUp2814V6VKyH78WzgjYmZoCokv2hlOidjn3troHyU5JmKQpoglyurlvavkxzwjFyaltJs1f4OTIs6K1a0TZVIf5D7F7R2h0MXbt4sXIoZGitjkFin2ueDNjtBXqClUS4kkq195D0Tsv/4yL3i1iRZzu9aweh7Y58KKujVSM0dJevzeake4CUUAirCgCEARgCIARQCKABQBKAJQBDgVwV+HVMyDPmJiFeF7UIQOkSdvdPUjQb1gQAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NGetText.Target>
+                </uix:NGetText>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,193.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="337.6,71.2" sap2010:WorkflowViewState.IdRef="Assign_1">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:Boolean">[out_Success]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                </Sequence>
-              </uix:NCheckState.IfExists>
-              <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="433.6,248" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\FillInSecondTab.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="371.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Application Layer\Revisal\FillInSecondTab.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Angajati">
-                        <VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_Angajati" />
-                      </InArgument>
-                      <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Success">
-                        <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="out_Success" />
-                      </OutArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
-                </Sequence>
-              </uix:NCheckState.IfNotExists>
-              <uix:NCheckState.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 431, 149" DesignTimeScaleFactor="1.25" FriendlyName="'Atentie'" Guid="dc547f0e-e557-45d1-8efe-42774e56a38c" ImageBase64="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" InformativeScreenshot="3859d7ff8cb338885ec4945e3bee4017.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='Atentie' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
-                  <uix:TargetAnchorable.FuzzySelectorArgument>
-                    <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" Value="" />
-                    </InArgument>
-                  </uix:TargetAnchorable.FuzzySelectorArgument>
-                </uix:TargetAnchorable>
-              </uix:NCheckState.Target>
-            </uix:NCheckState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\FillInSecondTab.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="363.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Application Layer\Revisal\FillInSecondTab.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Angajati">[in_Angajati]</InArgument>
+                        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Success">[out_Success]</OutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <If Condition="[Text = &quot;CNP invalid. Vreti totusi sa continuati?&quot;]" sap:VirtualizedContainerService.HintSize="433.6,365.6" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Assign sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[out_Success]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </If.Then>
+            </If>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

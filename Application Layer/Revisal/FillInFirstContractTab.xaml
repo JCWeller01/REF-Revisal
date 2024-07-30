@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FillInContractTab" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FillInContractTab" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Angajati" Type="InArgument(sd:DataRow)" />
     <x:Property Name="out_Success" Type="OutArgument(x:Boolean)" />
@@ -6,10 +6,10 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1099.2,1979.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>636,2385.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FillInContractTab_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -41,10 +41,13 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-    </sco:Collection>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="98">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -87,123 +90,84 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FillInContractTab" sap:VirtualizedContainerService.HintSize="496,1914.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FillInContractTab" sap:VirtualizedContainerService.HintSize="573.6,2320.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="433.6,1628" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="511.2,2034.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1327.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="477.6,1733.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Text" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NSelectItem DisplayName="Select Item 'Tip contract'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_Angajati(&quot;Tip contract&quot;).ToString]" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
-              <uix:NSelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="7">
-                  <x:String>Contract individual de munca</x:String>
-                  <x:String>Contract de ucenicie la locul de munca</x:String>
-                  <x:String>Contract de munca la domiciliu</x:String>
-                  <x:String>Contract de munca temporara</x:String>
-                  <x:String>Contract individual de munca tineri dezavantajati (Legea 189/2018)</x:String>
-                  <x:String>Contract individual de munca cu clauza de telemunca</x:String>
-                  <x:String>Contract de munca temporara cu clauza de telemunca</x:String>
-                </scg:List>
-              </uix:NSelectItem.Items>
-              <uix:NSelectItem.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="534, 334, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Contract de'" FullSelectorArgument="&lt;ctrl automationid='TipuriContract' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='TipuriContract' role='combo box' /&gt;" Guid="4bce2aa6-298a-4f52-baa2-ef166cb91d54" InformativeScreenshot="b2bee1e5401eb254aa4297fa0949cbb7.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\SelectItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="415.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Application Layer\Revisal\SelectItem.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Filter">TipuriContract</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Chosen">[in_Angajati("Tip contract").ToString]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <uix:NClick ClickType="Double" DisplayName="Click 'Durata contract'" sap:VirtualizedContainerService.HintSize="415.2,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="534, 373, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Determinata'" FullSelectorArgument="&lt;ctrl automationid='TipuriDurata' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='TipuriDurata' role='combo box' /&gt;" Guid="659a12e3-ca12-4bd5-a06c-04e9f069e9d8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfgAAAAfCAYAAAALHt/xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ8SURBVHhe7dm9TuNYGMbxXAF3ENpwMTjXwC50aFuSFIiV6EGr7Ygz0morNDRoaEhCTRmYirBIBEaEb7iEd32OP49zHAMKO4n3/0o/CZ9v0zy2UxKKoiiKogpXBDxFURRFFbCigN/b2wMAADMuLCPgh8OhvL6+AgCAGaMyPDPgX15erJMAAMB0UxlOwAMAUDBjA/75+VkPAAAAs0VlOAEPAEDBEPAAABTQ2IB/enrSAwAAwGxRGU7AAwBQMLkBn+moIfOlkpRSFupd+WEbP42+f5Hq3IydGQDwv/Pw8PCu9lBmwD8+PlonaCrgF+rS/ZFsP5LGvBf0I+3jHTXmCxKy3+VLdU6qrX8sfQAAfMz29vZImKtr1Z5sS1IZPjbgM3UbUvaCvHOd7juVlhdyC/WOXBvt2bqN8rvGTy//3h333NIHAMDHLC0tydbWltzf3+vrm5sb2dzc1O3psUkTDnhbnx980af8qK8rjXL8eV+JwzFrjue0JdW5Ban//af+xO73+Ws57tfEmo64549y2qrKXLiO48p5eM5g/3BPPU6t9c07v21fRd1b2OeJHkz0meL2Usk7X+c6XjcxhwcAAMB77O/vy/Lysg75i4sL2djY0OHearWs40OZAa9e/zN16lKu1KRzZek7cb2w88K1r65PxPWCulLryFXQ36mXddD2E9fJ/tw5en0vLI39O1LXwW7uq0M1Nc9x+8ac8PrEDYI4Opvfb57j12D9cL2K1DpX/nWwZ7x+0Pbb7/E51f8tOiMAAG9zfHwsq6ursrKyosN9d3fXOi7pkwI+CD7bOOMBwBLweXNGgloxw1qzhKm5ly3gzfG6LfEwYkoHui3g09SeyYcCAADept/vy/r6uhwcHFj70z71DT56Kx4Rh1w64HPnJB8gwj2zAj51xtyAT40fbUt8GQjkB7y/z8h9GGMAAJiszIBXP+ZnCsKzPRjt67mODkXVl/w7PS7kh25bBsF17pyeK44K+PYg0R6EdbMft1nOaO5lzrHta7TpfdUn+3B+T1zHC/Roz/S1R39FSJ5L7Zk+OwAAkzfhgE8FrQ44R5r99LhYOuBz5/ykgNd/O03pB31vCfiReyPgAQD/kcyAv7u7y9aueeG5JoeXibZe03/DXTuUy2hsT5pe6JUWd+QsamtL7Zf4ul0rp/pz5uh9KrJ2eBn0Bf1eWC/unMVtljOqveLzmXN6TRXm5nijTa1XWpSds0Sf93Ye7+mfO3n/6TX1vZbSZwcAYPI+HvDRb8qhOPxMfpAmf4M2Ai54MFB9cViOmfOzAj6YH56psvaX/OEF+siexnmDh5VgzuLOrrcnAQ8A+Fy5b/C3t7cAAGDGqAwn4AEAKJixAW+bAAAApl9uwA+HQwAAMGNUhhPwAAAUzNiAHwwG1kkAAGC6qQzPDHgAADDbwooCnqIoiqKo4hQBT1EURVGFK5F/AaXd+zIeMA3EAAAAAElFTkSuQmCC" InformativeScreenshot="aa9b597356600adf6b0758a5e233bea3.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target DesignTimeRectangle="371, 339, 163, 17" ElementType="Text" FriendlyName="'Tip contract'" FullSelectorArgument="&lt;ctrl idx='2' name='Tip contract' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Tip contract' role='text' check:text='Tip contract' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAVCAYAAAAjFP6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIMSURBVGhD7Zg9jsIwEEZzA65An+uQem/BAUJJTU0f0dDuFeAE21LwT7f1rGeSOHZiA1ocxYLvSRGKY88MymOckBAAkbFareh2uxHkBNEBOUG0sJzX6xVygviAnCBaWM7L5QI5QXx05NzOxpQkif+YzGmRjdRnQddqzeDsCspGKeWb32ogJFuajROaFNF824/hfufs9aYHBHK+Jf+SU7pr1Tl3RUajNKfF1Oi4D7pquzvrG7+d0dg1TjsqVLdO8zUtuWvL9bquUp56DR9pvqGfqq71Un2aY8a8JJmQ5Vwrv94lrLGIdow3h+U8n88vyqlumhZJ1vg7jaxV0uiQav50vqFfEcPIZcUp5WyErPLWcRx11nWxlE2qjL6Muqxa2vk553SurqFzDkUYOU3ZFOZ1C088EUE6YyMSI7EljuO6GcsnZ6uuDiIkd093/hLIORS9yOkVQ8tQnWs8AvB8iRNOTqnd3KalnnsCQs6hYDlPp9MnyFnGsJ4zdT2QM0Z6kTPUtt7ECSCnK7eW052/BHIOBct5PB4Dyik33CVgiaxtSfPsC5FXTodA3R9Ne055rjtpp26VU16I7okL+iSMnNYz3OMuI+td80UQV5xHctp18Lz6rySrdCu+kvKbz9vbfJNfd39z3LUjgF5gOQ+Hg0fOJ+h2KADCADlBtEBOEC0vywlAX0BOEC0s536/pz+e/RhoMWU+BAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NSelectItem.Target>
-            </uix:NSelectItem>
-            <uix:NSelectItem DisplayName="Select Item 'Durata contract'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_Angajati(&quot;Durata contract&quot;).ToString]" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
-              <uix:NSelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="2">
-                  <x:String>Nedeterminata</x:String>
-                  <x:String>Determinata</x:String>
-                </scg:List>
-              </uix:NSelectItem.Items>
-              <uix:NSelectItem.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="534, 373, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Nedeterminata'" FullSelectorArgument="&lt;ctrl automationid='TipuriDurata' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='TipuriDurata' role='combo box' /&gt;" Guid="c90c7b52-0131-4920-b65d-9e707bee5d6c" InformativeScreenshot="be99dcc24cc32adc35b37b4e80ebffd0.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="371, 378, 163, 17" ElementType="Text" FriendlyName="'Durata contract'" FullSelectorArgument="&lt;ctrl name='Durata contract' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Durata contract' role='text' automationid='' check:text='Durata contract' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAVCAYAAAAjFP6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKUSURBVGhD7Zg7csIwEEB9A65Azz04AdTpcwAOAGXq1Ok9NLSUtHCCtBR8TZd6o9VKZiWvABNINJl9Mwwgyau19tkyFKAomTGdTuF0OoHKqWQHyllVlcqp5IfKqWSLyqlkC8p5PB5VTiU/RDlXky4URRG+emNYfrkBT2BdDqHz5Dnas4Zy2IHeeAmPT+uZsf8HaTkDUWghi6IH4yfZo3IqMSjn4XC4JifB2yWZbP+ghIp9nuO7ufMOyorapLvxagJd3m4vgk93QbB2FztJHKcev4JJV2o/n8fsw7y7fi+MmO8C5xhAOXdzYSwxf7Yw6xKGHdZv4ryPEmuh1LSSkxaZFv4mOc2io5Se1aTPiubuxm58Mx72v8D5cBIseaexgnApzPGjNxMvPk6Y1+RZ97Nz9GODOb2ITHBs67MxFNMITBNYMcN1eDV9QmwloJ2cThBc6Jvk5AUU4DGkeDHpmOlCi3GtMCRPs5/HSsnpxEvBBL8nZ4VAOff7/W/JSQWRtjNZzmg7xpdY6HNeMXIeOD61A9wnp43D82SPJrKAKuc12snZdlsPpHCisWN4jEY8tx3yGLJoyN/KaefgjxT1OqmcP6GVnLy9tZxCUS/JeS1+SLrQUhyeS7O/rZzChaHb+kNAOXe73XU5bZt4d6Dvtshs220UJRpP39mdNC66+D28kwbYfhYfi3/rD6KknMJ5NOSMJXPxfS7uPLm89INIiK0EpOUMnp+YRIxaSPPC4izYYksLz8djPPv3TR3XFxX7qbBBHiaW/VvqUjG9wOwYGuseKRrtLqcLcnq57HE4zv+VFJ7YeQzmPvuQL0Q/v58vjl3noCAo53a7DeVUlBxQOZVsUTmVbFE5lWxBOTebjcqp5AfJuYFv8So1//viXMoAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
-              </uix:NSelectItem.Target>
-            </uix:NSelectItem>
-            <uix:NSelectItem DisplayName="Select Item 'Tip norma'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[in_Angajati(&quot;Tip norma&quot;).ToString]" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
-              <uix:NSelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="2">
-                  <x:String>Norma intreaga</x:String>
-                  <x:String>Cu timp partial</x:String>
-                </scg:List>
-              </uix:NSelectItem.Items>
-              <uix:NSelectItem.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="534, 411, 500, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Norma intreaga'" FullSelectorArgument="&lt;ctrl automationid='TipuriNorma' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='TipuriNorma' role='combo box' /&gt;" Guid="38d4e297-6804-421e-988c-54ac5aeb8fe7" InformativeScreenshot="83e1128fddc5e97a72c19e052f3a9896.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target DesignTimeRectangle="371, 417, 163, 16" ElementType="Text" FriendlyName="'Tip norma'" FullSelectorArgument="&lt;ctrl name='Tip norma' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tip norma' role='text' automationid='' check:text='Tip norma' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAUCAYAAADoSC03AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG5SURBVGhD7ZY9coMwEEa5AVdwzz1yAvsqOQAuU7t2z7hxmyvYJ0hLAdjgLvVGQhLIkiA/FsnO5HszGiwk7YrxY1FCADDjcDjQ7XYjyAnYIeXsug5yAn5ATsAWyAnYIuVs2xZyAn54cp63K0qSZLqtX2i3ScW1oE6vAWAJpJzX63WicpYFbdKM8tO7vgHA7/EjOfvqqitnWWwozXLaPVsVd6aqmrWvVoVeF/bsM21XOo4Ty+Q67sVVjGX5id4C+ft45y2tvBhObNFkDLx6PIkjp/iTB8H6Na5wI+bYMIz3Eq1JdZU8ozAlFdYRwuSyhXLzm/4g5N0ziPhPOQ2P88lewd8SrXLaU+xxF39MCSkFCcVSe1Dyhsa9e3eyS8b4Pkp+VE+eSDkvl0tcOYOSaebkDEstx9UeosipqyU+7fz5X3Lqc6h7bICcPFlEzrBkijk5g1Jbsj0qp58bcnJGytk0TUQ5ezn8NYY5Oc1vt7JN5hJ8R053bt/HZ50tceS0zm+yKdHCzMs59od41txH5RSzlew6dpYfaY/KyRYpZ13XE3J+gZAwAMQAcgK2QE7AloflBGAppJxVVdEHwSLiqW5ZYEMAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NSelectItem.Target>
-            </uix:NSelectItem>
-            <uix:NSelectItem DisplayName="Select Item 'Durata timp munca'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[in_Angajati(&quot;Durata timp munca&quot;).ToString]" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
-              <uix:NSelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="3">
-                  <x:String>Norma intreaga 8/40</x:String>
-                  <x:String>Norma intreaga 6/30</x:String>
-                  <x:String>Norma intreaga legi speciale</x:String>
-                </scg:List>
-              </uix:NSelectItem.Items>
-              <uix:NSelectItem.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="534, 450, 500, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Norma intreaga 6/30'" FullSelectorArgument="&lt;ctrl automationid='NormeTimpMunca' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='NormeTimpMunca' role='combo box' /&gt;" Guid="65d3fe1c-c486-4b17-8e5b-78d8fdaad1bd" InformativeScreenshot="f37010701959c4a6e2195069997a0366.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target DesignTimeRectangle="371, 456, 163, 16" ElementType="Text" FriendlyName="'Durata timp munca'" FullSelectorArgument="&lt;ctrl name='Durata timp munca' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Durata timp munca' role='text' automationid='' check:text='Durata timp munca' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAUCAYAAADoSC03AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK0SURBVGhD7Zg9cuowEIB9A65Azz1yAqjfLXIAKFOnTu+hoU2ZNlSvfC0F/3SpN/o1u9q1jefFRE72m/HENtJqvfokEwpQlMxYLpdwuVxA5VSyw8p5Pp9VTiU/VE4lW6ycp9NJ5VTyQ5RzvRhDURT0mMzh/SM06IFNOYPR/4yxXsC4mEJ5DtewhsW4gMn8HXpMW+mRejmJKBsoZyMj6QTmPRn69XIqQ8fKeTwe2+T04PuSTO7zaQnWj3j+av+anXdqrHH3pN3YiYXuu0XwLywIdD/EZmxKmI1QO3NMy7+uf9w5fT5P8FzF9AvNPUfoU+2yLp75/PkR5dUgvtTe5ep3b9rfL3S6o/t2tkbX81ehbyCtFxvLH0N/a3SSs5qEOKltcpoC+YJ71osHtPOG3Ti05/Hs539uf02znZNK4PPxuVtiflU83D/KXi0GmisjbR+vRSFpXh4uJxYS19XneX0OF/vxydTN9HtA9Qs54PoPjW5yoiLeunM2lQbHkOKlNMa8RU7Ul42HFh45j7D4CNYey+a5jn+bnESqamypbx1d2ubJneX0BcOvnqavCXE80v675JTuRe4mp/AZxuVB6zV0OQ+HQ0+vdSJSEA31wTFkWaiMPCbit8vp2mAZpXGGRSc58f3OcjJ5aIw0Xlt8Rt9yCvlX3E3OeuF4bX6GnPv9vl1Odw9/EU8mxE02eu2yYqUT6K7RTppOvnhNd1ICE+Qr5fTC1E50TXtZznRsn6d9BbfLGc+T5zT/EK1e6PPE+fiZcloR8JHIaqmENIctwhuaACanAbe38WhBr5MUFwHJw8RyP0slMTG4vfxTUhc5w7ho/LpxSV9Hs5z8Wd9Q+xY5q+s0NxzTzscKXtDzDxEr5263o3L+ephsynegckqonFmgckqonFmgcirZonIq2WLl3G638Anc6ecR566ilwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NSelectItem.Target>
-            </uix:NSelectItem>
-            <uix:NSelectItem DisplayName="Select Item 'Repartizare timp munca'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="[in_Angajati(&quot;Repartizare timp munca&quot;).ToString]" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
-              <uix:NSelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="3">
-                  <x:String>Ore de zi</x:String>
-                  <x:String>Ore de noapte</x:String>
-                  <x:String>Inegal</x:String>
-                </scg:List>
-              </uix:NSelectItem.Items>
-              <uix:NSelectItem.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="534, 489, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Ore de noapte'" FullSelectorArgument="&lt;ctrl automationid='RepartizariTimpMunca' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='RepartizariTimpMunca' role='combo box' /&gt;" Guid="2626bab0-5a0a-4988-9800-2c8fe27e695c" InformativeScreenshot="f4cc8038fa4632347570358b5fc97ccb.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target DesignTimeRectangle="371, 494, 163, 17" ElementType="Text" FriendlyName="'Repartizare timp munca'" FullSelectorArgument="&lt;ctrl name='Repartizare timp munca' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Repartizare timp munca' role='text' automationid='' check:text='Repartizare timp munca' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAVCAYAAAAjFP6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM0SURBVGhD7Zg7ctswEIZ1A11Bve6RE0h1eh8gB5DK1K7Tc9S4dZnWqlK6VaG3OtcIsACIXSwelCgpnMl+MxwTz339IEWPlCAMjNVqpS6XixJxCoPDiPN8Pos4heEh4hQGi4hTGCxGnKfTScQpDI+kONfLiRqNRuSaLj7Ulxt/KptGzcdTtfgI1sG/6UKhrqcDPswadXZt6+dIzZq2R+hJXpy4+C7x/0SgCXEOASZO4e4YcR6Px4o4NTnBtk/XtlAb1czHWsiv6sckjLdPlPVSTfwauLDw1mqp18yad/gb5oTLHJDPZq7G4Iu1xeYZX66yM1PgXjYmysbYJ3ub9X5P2CiRA2sD8ujW0ZzM1M9XtG/pzZCYDw8O7H+7HvvlwAfe37/9Sqy1xPEyW+6691vjOnH6YuHgAF8M82T1gnEFN6MQnGvrxH5DT2Ay5hKJ13Jbbk2qeHhubzs4Jg7JB8DFGfb37VBAEoM7SMGW3Stnm8137bQg8b0Dxwr3eC2Nm+bNoPd70XGbdd9R/OADrVNfuokzMgwOR0+VkOxUURMJ8hBRVBLpIIVtKYupZqcck+tAdBEn9oXNh5y6ouN7R8k2m89yhO1XclrMb6FujGvmdsOI83A4VD6ISJJs4GSczEuJhPZB8GRtXjTl5LkODTtQmu52ajG5aYhHizPZ53mWOD/5GAH8oPl6jjh9UZwDcSGp+DCp8dD3G4SPAibJuVGc4COdYw9YVzu1mDj/uzj9wQ/7Juz0pC5OjXUkOBmPU1KF9o7bD5BsomqJdFBx2jVpe93tlGPiPFqc7ABiniXO7Gu9VON47u0Yce73+44fRD4hEFAkCNMHP5AzhYH94jHbLr7WE324cClfefI62CnGxOHiwXtmctBVnM6XbKGvEmds2/rZ5oKtNV0hNrjHtsx6/UH0HsVj9VHw+QY6i5MF1bbj3xteCHiMJ972673gXxh0zzhAmyC7xiQ8/CuJ+wCXSdoNdvIxpcBzTXx4z1vESe2SQxJzpTiZr3/Q/Io42zbzjeYq+VbsiRHnbrej4uwHL4xQIRabAIg4h4CIM4mIcwiIOJM8QJyCcB9EnMJgMeLcbrfqL3iKYH6cuu2cAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NSelectItem.Target>
-            </uix:NSelectItem>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Continuare &gt;&gt;'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
+              </uix:NClick.Target>
+            </uix:NClick>
+            <If Condition="[in_Angajati(&quot;Durata contract&quot;).ToString = &quot;Nedeterminata&quot;]" sap:VirtualizedContainerService.HintSize="415.2,541.6" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(up)][u(hk)]" Version="V3" />
+              </If.Then>
+              <If.Else>
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(down)][u(hk)]" Version="V3" />
+              </If.Else>
+            </If>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\SelectItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="415.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Application Layer\Revisal\SelectItem.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Filter">TipuriNorma</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Chosen">[in_Angajati("Tip norma").ToString]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\SelectItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="415.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Application Layer\Revisal\SelectItem.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Filter">NormeTimpMunca</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Chosen">[in_Angajati("Durata timp munca").ToString]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\SelectItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="415.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Application Layer\Revisal\SelectItem.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Filter">RepartizariTimpMunea</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Chosen">[in_Angajati("Repartizare timp munca").ToString]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Continuare &gt;&gt;'" sap:VirtualizedContainerService.HintSize="415.2,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="1668, 976, 125, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Continuare &gt;&gt;'" FullSelectorArgument="&lt;ctrl automationid='MoveNext' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MoveNext' role='push button' check:text='Continuare &amp;gt;&amp;gt;' /&gt;" Guid="bea94402-d8da-45a0-914a-a7ad1b7cf349" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAApCAYAAAAS70rTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALBSURBVHhe7Zw7ciIxEIYnI+MiHMARpyB1shEpKcGegBuQOSDgBCSbEDshIaAKzqLVc6bV6hkJW7PlZX5VfWWs0ejR/UnCiRuFMvkCCVA6CTabDZgYoUQSXC4X9Xg8wItj8twrgfQCeD3u9zskmDqQAEACAAmABhIASAAgAdAMSmAeSi+B1wISAEgAIAHQjCjBUa3njWoawmqvrmLbWvgxRx/ntRhHguNazXXSV/srqT+r3a/f6nQj7b7JebdUMyT829SX4LxTy9lCbU83+XlFIEEdqktwXM8Lj2N9Mixn5LqIxbEJXmzV6eBOFdvG/G5PEv5uoxbbk7r5evdZt2uFPJCriY7D2nvMGmidnQsZi55wYb0f5id9Zsfu3uFjcI7rt7KNo0/Zt0xfz1JZgk8b1PgakHB3dxQYe4V0CWoD3wqVvpOeBJIEJgkrtb+6NjZpTCaeoFgC3YZeY3aerD8mRnoaurkPx8XNhc61jxCbfJzLqCzBH73YeEdLtLucfT+gwXcLjQPCk14qQZqg0G+JBByT0G6NsVQO6f10rn34L7dCfDhOwHy8c4wgQd5QO3khIDRQ9jMLBK8rk4AFKaorlcAnxh/tNPDpWsKOpu09BYlt8QLnr9YwXv4E6aOyBO466N9FDmmnGH6kBMlfOsJJMDSHL2D7jMbswc8tL8owlSXQsDtTQkqwgQb/30ggCRn3kT7PSSDX5XHjliTfrrtC8gP1JdDYICR3lV5k+wXLHa9RcJk8xRJEbZ6XwAWUjasDHPrgY/C1iQm3Y7Bk6vW9DyTX9JPd+QYTp0rJD4wigSUcVYR4kfyejU+PNMFSXdeHS9rzEtAdGPo56IS0fbDnq/1H9iSw8PWztfwkxpMA/DdAAgAJgAMSAEgAIAHQQAIACQAkABpIAPolwH8qmQaD/6kETItQWglQplsgweSLUn8BsBJb0vPpQzAAAAAASUVORK5CYII=" InformativeScreenshot="063c8b670894dda67362ae4b79bd3243.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1681, 985, 98, 19" ElementType="Text" FriendlyName="'Continuare &gt;&gt;'" FullSelectorArgument="&lt;ctrl automationid='MoveNext' /&gt;&lt;ctrl name='Continuare &amp;gt;&amp;gt;' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MoveNext' /&gt;&lt;ctrl name='Continuare &amp;gt;&amp;gt;' role='text' automationid='' check:text='Continuare &amp;gt;&amp;gt;' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAXCAYAAAD5oToGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJMSURBVGhD7ZavdcMwEMbNwrJIBgjKFKYlRZ4hoBNkA7OCAE9gUhJcHBDgWVTpJNl3p5OltE2qvifwvaaKfH++n3ROM02TqipPFUyhqmAKVQVTqCqYQlXBFKoKplBFwAyq2zaqaZDaXl3Fvb8ll/Phef6HQjBDp7YaRNtf0fpFnV7f1HhD+36oy+mgNhVCVBTM5aQOm506jjey6RGqYNZFwAzdNnOU6Bt02KBRR2GC6bujGs/29sEe8z/cOP5so3bHUd3cuv2s982H5IzGKs7D9juZHvAa1IJy4Ung+303f/F3kHt5hufgGrp93mHW02ifiOWFwHxCo3SESbLvAlIsjL/FtNmMGXL4THhjJDDGmFb1V7sHjGSAuWkUjN6DRzDUyeIxWOHUsLWv+2JrwbXG5L1J+YzAfOgC6MmXNN8G9r7BhtjktEgOIhdMaJqPmwOGy5i89EhBW0nPh7XG5H7ACP5w2UMR95uBSZOEgEKRuHj4zIrja3lgWOFkLReMM8uNJWxG2Is/+Xi/U4bZs9yhSr8WfL7wpgWjLH7arKQTZVQkmOAXpnBj1mr4hiAmyRmRqy0Gj7z8+QyWJJluhA15DhjpkNAY4fcpMPJaWjZvDhDoewWIFwWjBYUFs08nnl+idjSQhhnQbDBkz/1gbJMsr27ax+A5eG8iBMjBDNb9vawYbuIkb4iR8SkTegAG5K8ZEk3M5za9ZaHp0toSwxp5Pxh8Un2cszZpjsG+b/v35I0B8f5ZL8+QDKbqz1XBFKoKplBVMIWqgilSk/oCw8yxYyJ9ZO8AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -217,14 +181,10 @@
         <uix:TargetApp Area="-9, -9, 1938, 1038" FilePath="C:\Program Files (x86)\TeamNet\ReviSal HG905-2017\teamnet.revisal.ui.exe" IconBase64="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" InformativeScreenshot="f6247846ec7ba9ed986aaae3c201cdbc.png" Selector="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\FillInSecondContractTab.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Application Layer\Revisal\FillInSecondContractTab.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\FillInSecondContractTab.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="511.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Application Layer\Revisal\FillInSecondContractTab.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Angajati">
-          <VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_Angajati" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Success">
-          <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="out_Success" />
-        </OutArgument>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Angajati">[in_Angajati]</InArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Success">[out_Success]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

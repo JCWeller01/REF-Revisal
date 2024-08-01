@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="in_UnreadEmails" Type="InArgument(scg:List(snm:MailMessage))" />
     <x:Property Name="out_FilteredEmails" Type="OutArgument(scg:List(snm:MailMessage))" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1099.2,3115.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>732,3115.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FilterEmails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,11 +115,11 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentEmail" />
           </ActivityAction.Argument>
-          <If Condition="[currentEmail.SenderEmailAddress = &quot;diana.gradinaru@fwfcompany.com&quot;]" DisplayName="If - Sender is Diana Gradinaru" sap:VirtualizedContainerService.HintSize="644.8,2067.2" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[currentEmail.SenderEmailAddress = in_Config(&quot;RecipientAddress&quot;).ToString]" DisplayName="If - Sender is Diana Gradinaru" sap:VirtualizedContainerService.HintSize="644.8,2067.2" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <If Condition="[currentEmail.Attachments.Any]" DisplayName="If - The Email has Attachments on it" sap:VirtualizedContainerService.HintSize="563.2,1639.2" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Then>
-                  <If Condition="[currentEmail.Attachments(0).Name = &quot;Angajati.xlsx&quot;]" DisplayName="If - The attachment is the Angajati.xlsx file" sap:VirtualizedContainerService.HintSize="481.6,892" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[currentEmail.Attachments(0).Name = in_Config(&quot;InputFilename&quot;).ToString]" DisplayName="If - The attachment is the Angajati.xlsx file" sap:VirtualizedContainerService.HintSize="481.6,892" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
                       <uasa:AppendItemToList x:TypeArguments="snm:MailMessage" ItemIndex="{x:Null}" DisplayName="Add the email to the finalised for list" sap:VirtualizedContainerService.HintSize="333.6,144.8" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_1" ItemToAppend="[currentEmail]" List="[out_FilteredEmails]" />
                     </If.Then>
@@ -129,7 +130,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Salut,&#xD;&#xA;&#xD;&#xA;Am intalnit urmatoarea eroare: Atasamentul nu este corect / nu exista!&#xD;&#xA;&#xD;&#xA;Multumesc!&#xD;&#xA;" DisplayName="Send Outlook Mail Message - BRE2" sap:VirtualizedContainerService.HintSize="337.6,156" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="FWF Revisal POC | Incorrect Attachment" To="diana.gradinaru@fwfcompany.com">
+                        <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_Config(&quot;BRE2Body&quot;).ToString]" DisplayName="Send Outlook Mail Message - BRE2" sap:VirtualizedContainerService.HintSize="337.6,156" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;BRE2Subject&quot;).ToString]" To="[in_Config(&quot;RecipientAddress&quot;).ToString]">
                           <ui:SendOutlookMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                           </ui:SendOutlookMail.Files>
@@ -146,7 +147,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Salut,&#xD;&#xA;&#xD;&#xA;Am intalnit urmatoarea eroare: Atasamentul nu este corect / nu exista!&#xD;&#xA;&#xD;&#xA;Multumesc!&#xD;&#xA;" DisplayName="Send BRE2 Email" sap:VirtualizedContainerService.HintSize="337.6,156" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="FWF Revisal POC | Incorrect Attachment" To="diana.gradinaru@fwfcompany.com">
+                    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_Config(&quot;BRE2Body&quot;).ToString]" DisplayName="Send Outlook Mail Message - BRE2" sap:VirtualizedContainerService.HintSize="337.6,156" sap2010:WorkflowViewState.IdRef="SendOutlookMail_4" Importance="Normal" IsBodyHtml="False" IsDraft="False" MailMessage="[currentEmail]" Sensitivity="Normal" Subject="[in_Config(&quot;BRE2Subject&quot;).ToString]" To="[in_Config(&quot;RecipientAddress&quot;).ToString]">
                       <ui:SendOutlookMail.Files>
                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                       </ui:SendOutlookMail.Files>
@@ -171,7 +172,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Salut,&#xD;&#xA;&#xD;&#xA;Am intalnit urmatoarea eroare: Nu am depistat niciun email trimis de sender-ul agreat!&#xD;&#xA;&#xD;&#xA;Multumesc!&#xD;&#xA;" DisplayName="Send BRE1 Email" sap:VirtualizedContainerService.HintSize="337.6,156" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="FWF Revisal POC | Incorrect Sender" To="diana.gradinaru@fwfcompany.com">
+          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_Config(&quot;BRE1Body&quot;).ToString]" DisplayName="Send BRE1 Email" sap:VirtualizedContainerService.HintSize="337.6,156" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;BRE1Subject&quot;).ToString]" To="[in_Config(&quot;RecipientAddress&quot;).ToString]">
             <ui:SendOutlookMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:SendOutlookMail.Files>

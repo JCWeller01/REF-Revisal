@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>727.2,2254.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824.8,2672.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SelectItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -102,7 +102,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SelectItem" sap:VirtualizedContainerService.HintSize="737.6,2189.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SelectItem" sap:VirtualizedContainerService.HintSize="835.2,2608" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Text" />
     </Sequence.Variables>
@@ -111,63 +111,79 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="675.2,2066.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6d6a33d3-0518-4172-ae5e-59a99158583c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="772.8,2484.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6d6a33d3-0518-4172-ae5e-59a99158583c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="641.6,1765.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="739.2,2184" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ClickType="Double" DisplayName="Click 'Tip contract'" sap:VirtualizedContainerService.HintSize="579.2,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Tip contract'" sap:VirtualizedContainerService.HintSize="676.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="534, 334, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Contract individual'" FullSelectorArgument="[&quot;&lt;ctrl automationid='&quot;+in_Filter+&quot;' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;ctrl automationid='&quot;+in_Filter+&quot;' role='combo box' /&gt;&quot;]" Guid="a45ae4ef-1187-4a1a-a431-a1e7ec909a9d" ImageBase64="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" InformativeScreenshot="77faf53fe6061355f8abd828731c5033.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="534, 334, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Contract individual'" FullSelectorArgument="[in_Filter]" FuzzySelectorArgument="&lt;ctrl automationid='TipuriContract' role='combo box' /&gt;" Guid="4ae34c08-7f85-468c-a7d9-a856bc0fb974" ImageBase64="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" InformativeScreenshot="57bc3ca992b969cceeafb1bc864a7e4f.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                       <uix:Target DesignTimeRectangle="371, 339, 163, 17" ElementType="Text" FriendlyName="'Tip contract'" FullSelectorArgument="&lt;ctrl idx='2' name='Tip contract' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Tip contract' role='text' check:text='Tip contract' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAVCAYAAAAjFP6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIMSURBVGhD7Zg9jsIwEEZzA65An+tAvbfgAKGkpqaPaGj3CnCCbSn4DR31rGeSOHZiA6t1FAu+J0Uojj0zKI9xQkIARMZ6vabb7UaQE0QH5ATRwnIWRQE5QXxAThAtLOf1eoWcID46cu7mY0qSxH9MFrScjtRnTkW1ZnD2OU1HKWXbezUQkh3NxwlN8mi+7cfwuHP2etMDAjnfEpbzcrn8TU7prlXn3OdTGqUZLWdGx33SVdvdWd/43ZzGrnHaU666dZptaMVdW67XdZXy1Gv4SLMt/VR1bVbq0xwz5iXJhCznWvn1LmGNRbRjvDlh5FQ3TYska/ydRtYqaXRINX+22NJdxDByWXFKORshq7x1HEeddV0sZZNqSl9GXVYt7fycc7ZQ19A5hyJY5zSnmNctPPFEBOmMjUiMxJY4jutmLJ+crbo6iJDcPd35SyDnUPQip1cMLUN1rvEIwPMlTjg5pXZzm5Z6HgkIOYeC5Tyfz58gZxnDes7U9UDOGOlFzlDbehMngJyu3FpOd/4SyDkULOfpdAoop9xwl4AlsrYlzasvRF45HQJ1fzTtOeW57qSdulVOeSF6JC7okzByWs9wz7uMrHfNF0FccZ7JadfB8+q/kqzSrfhKym8+b2/zTX7d/c1x144AeoHlPB6PHjlfoNuhAAgD5ATRAjlBtPxbTgD6AnKCaGE5D4cD/QI5CRhlYzWwGgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NGetText DisplayName="Get Text 'Contract individual'" sap:VirtualizedContainerService.HintSize="579.2,167.2" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" TextString="[Text]" Version="V3">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="534, 334, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Contract individual'" FullSelectorArgument="[&quot;&lt;ctrl automationid='&quot;+in_Filter+&quot;' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;ctrl automationid='&quot;+ in_Filter +&quot;' role='combo box' /&gt;&quot;]" Guid="942d0de8-5435-4f31-9aca-51a63ee96f71" InformativeScreenshot="3725502214753532e7804fad3d01f481.png" IsNativeTextCaseSensitive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
-              </uix:NGetText.Target>
-            </uix:NGetText>
-            <If Condition="[Text = in_Chosen]" sap:VirtualizedContainerService.HintSize="579.2,1226.4" sap2010:WorkflowViewState.IdRef="If_1">
-              <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="497.6,960.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Contract de'" sap:VirtualizedContainerService.HintSize="676.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 1938, 1038" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Contract de'" FullSelectorArgument="[&quot;&lt;ctrl name='&quot;+in_Chosen+&quot;' role='list item' /&gt;&lt;ctrl name='&quot;+in_Chosen+&quot;' role='text' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;ctrl name='&quot;+in_Chosen+&quot;' role='list item' /&gt;&lt;ctrl name='&quot;+in_Chosen+&quot;' role='text' automationid='' check:text='&quot;+in_Chosen+&quot;' /&gt;&quot;]" Guid="d30fdf47-491e-411e-8c8f-6d6aaec6972b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQMAAAAWCAYAAADEvflXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUTSURBVHhe7Vy7alVBFD0/kSZYi2AlJEXAH7CQ+wWBlKkCtloHbBX7GMTG0jSWmh8QLCxSmS+w8APGM++1H2fmnHuj0ZtdLEhmz36stffsXBNwOP/+0xkMBsPw6ccvZzAYDLYMDAZDgC0Dg8EQYMvAYDAE2DJAfL1wq917bvX+WrcbAj68P3Y7w4E7udTtPWzqvwTr5Ao+u8fu5Vfdvq0QyyCKN7gBsHN04T6we1uJ/3oZXLuXR/fcsPfKnan2itt+zJv6L8E6uYLP3V4GaZiEcN/cyd4NPZDw2Ab38PSbbr8R+HrXXGD2yWAWbBlsJ8oy+CsNsmWwFbBlsJ1IyyA+oPkfMes/IfBhFxE/vnIPy53ciJQDfAd/93N+gF+SPT5GnseDL5Gz0wNi3zk6d8/Dpxv0aw0Cq2l33z0gyyB/Wsp3Oovi0vNm+cJZKybyauQriyrrNOGLPUzLt8aLtckHsown9Zd82prPyS/9Za/9so/9o3NBfxjIXApCjyD2o322DPjszuT3DuKmviCPWnefR/AbY7wOsVNMsbB4namPYg5GKG89LoOZP7EjERCC+UURMBEbUC1PKZQK7GM9hnsxdh1SUYsX4okXh4qY/SXkPZoj1k7iiIfN0F0GSQ9souf/xOvTyafoVIYufK9rzfl5TTW/JTyl/wo4KxwZqH8aYBhOau/3uvWIeCwBwZXXL3P0YkY7ckocxzP6VqgGLR55idQ+UXvJATp6bo+9vcxYOldmw2PBMtAKTkUm4QJBNgSEtJYnnDUeWAb6NuvlIulQG4q1+CERA92JHQaLxcRhE4PH7rXyaToRHegywL7UeBGE+xo8Ve3WtWuaCd7tXlMbrb1dC9UsnwefpEn4mtnb86fljHmInqSffR6hn6wO8fYamlPovOcvA1J8PcciUETNruaZiOuRtyEi+KoDlEFFlPYITVysJdZNc2dMxtbqCmcQs/lAG/k0nYie2GBl+ADYk3V4on88i5pT/6n+KPmFJsBlRq9bj0jWitD8aU3aDGZwP+JPcv75ZaDOMyLoyDiw+/N/ZzDxaHuNJcKQ4U131LipHhQUff/WMph4uJPYdBm08mk6ET03WAYLeaJ/GTLQktjBL6Of/x9bBq13oUDmvN1lEGxjj2p8nJV6Ly2DnmgeunBYkNZYEpcMb7ozOeSNwdfiFFARpT1Cq5XkbQ7hBDrLgHyNfuVeI19PE9Zg7AuJM4L0ZA2e6N/tOfipdjU/9HBGr6mN9r9di740kZPGrweZ888vg2meGsfOMigXREB/vh+KjhsG7KxRmnC0SEqwxuAPhN/LtbHB54I/ezHmTraJLVkghizmrL9JT3EUPviLTQIeM31fY6YcJOZ4duhr7eTTdCL5GO/wyJjW49nT8S7tyXKexD/kgboKZ+wNBc2fNIF+qfWReOOZ2ut8d+4yUOxJt6qHrM/j7HTFZrZC5ox1Tc99n0dvGRTd8c54dvjswr3Ge+N5rE9ygmUQER/8eBGAJEqghPqYkk0ZKlVsD3+3/GmRCYv3/LC9OYfBj3d4raXOMpAe04Og56C1CD0YPw6ij78b/syKMWujM1qcaLOZTomnugzAXuNFLURPRizhyf2J7+j3/I2Mj5D5uSbSd16vvT7xT6/ZrnHlUOsn/GXP+ENCTPHDdyT62eERamwtg3CWf6BhHB+fnpc/wfeWgcFguJuwZWAwGAJsGRgMhgD7PxANBkPAcP/tlTMYDHcdV+43yc2choEaW5AAAAAASUVORK5CYII=" InformativeScreenshot="c7590598e2bbd992da8b42267fa0d782.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="676.8,1644.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="641.6,1556.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Text &lt;&gt; in_Chosen]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="435.2,837.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
-                    <ui:InterruptibleDoWhile.Body>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,660.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <uix:NGetText DisplayName="Get Text 'Contract individual'" sap:VirtualizedContainerService.HintSize="579.2,167.2" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" TextString="[Text]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="534, 334, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Contract individual'" FullSelectorArgument="[&quot;&lt;ctrl automationid='&quot;+in_Filter+&quot;' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;ctrl automationid='&quot;+ in_Filter +&quot;' role='combo box' /&gt;&quot;]" Guid="942d0de8-5435-4f31-9aca-51a63ee96f71" InformativeScreenshot="3725502214753532e7804fad3d01f481.png" IsNativeTextCaseSensitive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <If Condition="[Text = in_Chosen]" sap:VirtualizedContainerService.HintSize="579.2,1226.4" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="497.6,960.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="337.6,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" Shortcuts="[d(hk)][k(down)][u(hk)]" Version="V3" />
-                        <uix:NGetText DisplayName="Get Text 'Contract individual'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" TextString="[Text]" Version="V3">
-                          <uix:NGetText.Target>
-                            <uix:TargetAnchorable DesignTimeRectangle="534, 334, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Contract individual'" FullSelectorArgument="[&quot;&lt;ctrl automationid='&quot;+in_Filter+&quot;' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;ctrl automationid='&quot; + in_Filter +&quot;' role='combo box' /&gt;&quot;]" Guid="38b19588-0e08-4d2d-a910-70804572580d" InformativeScreenshot="3725502214753532e7804fad3d01f481.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
-                          </uix:NGetText.Target>
-                        </uix:NGetText>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Text]" />
+                        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Text &lt;&gt; in_Chosen]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="435.2,837.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                          <ui:InterruptibleDoWhile.Body>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,660.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="337.6,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" Shortcuts="[d(hk)][k(down)][u(hk)]" Version="V3" />
+                              <uix:NGetText DisplayName="Get Text 'Contract individual'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6d6a33d3-0518-4172-ae5e-59a99158583c" TextString="[Text]" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="534, 334, 500, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Contract individual'" FullSelectorArgument="[&quot;&lt;ctrl automationid='&quot;+in_Filter+&quot;' /&gt;&quot;]" FuzzySelectorArgument="[&quot;&lt;ctrl automationid='&quot; + in_Filter +&quot;' role='combo box' /&gt;&quot;]" Guid="38b19588-0e08-4d2d-a910-70804572580d" InformativeScreenshot="3725502214753532e7804fad3d01f481.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                </uix:NGetText.Target>
+                              </uix:NGetText>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Text]" />
+                            </Sequence>
+                          </ui:InterruptibleDoWhile.Body>
+                        </ui:InterruptibleDoWhile>
                       </Sequence>
-                    </ui:InterruptibleDoWhile.Body>
-                  </ui:InterruptibleDoWhile>
+                    </If.Else>
+                  </If>
                 </Sequence>
-              </If.Else>
-            </If>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

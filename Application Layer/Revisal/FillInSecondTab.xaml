@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>664.8,3569.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1099.2,3600.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FillInSecondTab_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -112,9 +112,10 @@
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FillInSecondTab" sap:VirtualizedContainerService.HintSize="675.2,3504.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Fills in the second tab of the employees details." DisplayName="FillInSecondTab" sap:VirtualizedContainerService.HintSize="675.2,3536" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Country">
         <Variable.Default>
@@ -130,6 +131,7 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="612.8,3218.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="0be1d233-474e-42dc-92b6-2df3f1d6b6e4" Version="V2">
@@ -193,7 +195,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[in_Angajati(&quot;Localitate&quot;).ToString.ToUpper &lt;&gt; in_Angajati(&quot;Localitate&quot;).ToString.ToUpper]" DisplayName="Do While - Persons Location is Incorrect" sap:VirtualizedContainerService.HintSize="516.8,695.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While - Persons Location is Incorrect" sap:VirtualizedContainerService.HintSize="516.8,695.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
               <ui:InterruptibleDoWhile.Body>
                 <Sequence DisplayName="Body - Cycle through Localitate Options" sap:VirtualizedContainerService.HintSize="400,518.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -215,6 +217,9 @@
                   </uix:NGetText>
                 </Sequence>
               </ui:InterruptibleDoWhile.Body>
+              <ui:InterruptibleDoWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_Angajati(&quot;Localitate&quot;).ToString.ToUpper &lt;&gt; in_Angajati(&quot;Localitate&quot;).ToString.ToUpper" />
+              </ui:InterruptibleDoWhile.Condition>
             </ui:InterruptibleDoWhile>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Adresa'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="516.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="0be1d233-474e-42dc-92b6-2df3f1d6b6e4" Text="[in_Angajati(&quot;Adresa&quot;).ToString]" Version="V3">
               <uix:NTypeInto.Target>

@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>636,2528</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1099.2,2559.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FillInContractTab_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -102,10 +102,11 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FillInContractTab" sap:VirtualizedContainerService.HintSize="573.6,2463.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Fills in the first tab of the contract with the contract details." DisplayName="FillInContractTab" sap:VirtualizedContainerService.HintSize="573.6,2494.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="511.2,2034.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ded7f9d-381f-45d7-bc3c-98599ba2bbb1" Version="V2">

@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>636,2227.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1099.2,2633.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FillInPersonsInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -112,19 +112,19 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FillInPersonsInformation" sap:VirtualizedContainerService.HintSize="592,2162.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FillInPersonsInformation" sap:VirtualizedContainerService.HintSize="640,2568.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="529.6,2039.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="577.6,2445.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1738.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,2144.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Text" />
             </Sequence.Variables>
@@ -133,7 +133,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(1).ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="481.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(1).ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="422, 246, 438, 29" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl automationid='Entity_Nume' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Entity_Nume' role='editable text' /&gt;" Guid="7e04536b-c65e-425d-9277-d65fb76318e0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAhCAYAAACvIW6xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADGSURBVHhe7dUxCsJAAERR738VsfJgmzrNygoJWMQ+n/dguun/YwJAmNABkHaG7vl6m5mZZXb4Cd0Y29z33czM7LZbLbsM3ToAwJ2tlgkdAFlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApP0N3Rjb92BmZnbXrZZdhs7MzKyywxk6ACgSOgDC5vwAtBJrgFsRVaYAAAAASUVORK5CYII=" InformativeScreenshot="1d9586a985611adc27a3edb1961ebe06.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -144,7 +144,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Prenume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;Prenume&quot;).ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Prenume'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="481.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;Prenume&quot;).ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="422, 280, 438, 29" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl automationid='Entity_Prenume' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Entity_Prenume' role='editable text' /&gt;" Guid="c984a383-e7a7-4d25-9d20-37b70c00e287" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAhCAYAAACvIW6xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADGSURBVHhe7dUxCsJAAERR738VsfJgmzrNygoJWMQ+n/dguun/YwJAmNABkHaG7vl6m5mZZXb4Cd0Y29z33czM7LZbLbsM3ToAwJ2tlgkdAFlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApAkdAGlCB0Ca0AGQJnQApP0N3Rjb92BmZnbXrZZdhs7MzKyywxk6ACgSOgDC5vwAtBJrgFsRVaYAAAAASUVORK5CYII=" InformativeScreenshot="7b7dde988eb3fbd5fade95c56bede9c5.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -155,7 +155,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CNP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;CNP&quot;).ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CNP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="481.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Text="[in_Angajati(&quot;CNP&quot;).ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="422, 447, 438, 21" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text Entity_Cnp'" FullSelectorArgument="&lt;ctrl automationid='Entity_Cnp' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Entity_Cnp' role='editable text' /&gt;" Guid="c7241dff-2e2a-4356-a4b0-64531be05e0a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAZCAYAAABHCOtxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAClSURBVHhe7d0hDsMwEEXB3v8qVVEPlmITVwaJVNBwP81Ijy3/cB8TAMIMHQBp19A9X29JkjKdfobuOD5zjCFJ0ratLfs7dOsAAHa2tszQAZBl6ABIM3QApBk6ANIMHQBphg6ANEMHQJqhAyDN0AGQZugASDN0AKQZOgDSDB0AaYYOgDRDB0CaoQMg7XbofBiXJO3e7YdxSZIqna6hA4AiQwdA2JxfbjRvl/qGjxIAAAAASUVORK5CYII=" InformativeScreenshot="d649c416579978a21bed60c2e9e2a0f0.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -166,7 +166,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Continuare'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Continuare'" sap:VirtualizedContainerService.HintSize="481.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="1668, 976, 125, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Continuare &gt;&gt;'" FullSelectorArgument="&lt;ctrl automationid='MoveNext' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MoveNext' role='push button' check:text='Continuare &amp;gt;&amp;gt;' /&gt;" Guid="dfa5a964-5024-48be-957d-ff35058eea9e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAApCAYAAAAS70rTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALBSURBVHhe7Zw7ciIxEIYnI+MiHMARpyB1shEpKcGegBuQOSDgBCSbEDshIaAKzqLVc6bV6hkJW7PlZX5VfWWs0ejR/UnCiRuFMvkCCVA6CTabDZgYoUQSXC4X9Xg8wItj8twrgfQCeD3u9zskmDqQAEACAAmABhIASAAgAdAMSmAeSi+B1wISAEgAIAHQjCjBUa3njWoawmqvrmLbWvgxRx/ntRhHguNazXXSV/srqT+r3a/f6nQj7b7JebdUMyT829SX4LxTy9lCbU83+XlFIEEdqktwXM8Lj2N9Mixn5LqIxbEJXmzV6eBOFdvG/G5PEv5uoxbbk7r5evdZt2uFPJCriY7D2nvMGmidnQsZi55wYb0f5id9Zsfu3uFjcI7rt7KNo0/Zt0xfz1JZgk8b1PgakHB3dxQYe4V0CWoD3wqVvpOeBJIEJgkrtb+6NjZpTCaeoFgC3YZeY3aerD8mRnoaurkPx8XNhc61jxCbfJzLqCzBH73YeEdLtLucfT+gwXcLjQPCk14qQZqg0G+JBByT0G6NsVQO6f10rn34L7dCfDhOwHy8c4wgQd5QO3khIDRQ9jMLBK8rk4AFKaorlcAnxh/tNPDpWsKOpu09BYlt8QLnr9YwXv4E6aOyBO466N9FDmmnGH6kBMlfOsJJMDSHL2D7jMbswc8tL8owlSXQsDtTQkqwgQb/30ggCRn3kT7PSSDX5XHjliTfrrtC8gP1JdDYICR3lV5k+wXLHa9RcJk8xRJEbZ6XwAWUjasDHPrgY/C1iQm3Y7Bk6vW9DyTX9JPd+QYTp0rJD4wigSUcVYR4kfyejU+PNMFSXdeHS9rzEtAdGPo56IS0fbDnq/1H9iSw8PWztfwkxpMA/DdAAgAJgAMSAEgAIAHQQAIACQAkABpIAPolwH8qmQaD/6kETItQWglQplsgweSLUn8BsBJb0vPpQzAAAAAASUVORK5CYII=" InformativeScreenshot="3be4f8471f590aab390f938845175f57.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -177,7 +177,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <TryCatch DisplayName="Try Catch - Check if CNP is valid" sap:VirtualizedContainerService.HintSize="433.6,196.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch - Check if CNP is valid" sap:VirtualizedContainerService.HintSize="481.6,368" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
                 <uix:NGetText DisplayName="Get Text 'CNP invalid.'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7c334439-d9e6-45af-8f1c-b2655d4c6893" TextString="[Text]" Timeout="[1s]" Version="V3">
                   <uix:NGetText.Target>
@@ -192,10 +192,10 @@
                 </uix:NGetText>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,193.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -203,7 +203,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\FillInSecondTab.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354.4,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Application Layer\Revisal\FillInSecondTab.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Application Layer\Revisal\FillInSecondTab.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="371.2,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Application Layer\Revisal\FillInSecondTab.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Angajati">[in_Angajati]</InArgument>
                         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Success">[out_Success]</OutArgument>
@@ -214,16 +214,24 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <If Condition="[Text = &quot;CNP invalid. Vreti totusi sa continuati?&quot;]" DisplayName="If - CNP is Invalid" sap:VirtualizedContainerService.HintSize="433.6,365.6" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Text = &quot;CNP invalid. Vreti totusi sa continuati?&quot;]" DisplayName="If - CNP is Invalid" sap:VirtualizedContainerService.HintSize="481.6,600.8" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Assign DisplayName="Assign - Processs Unsuccessful" sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:Boolean">[out_Success]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                  </Assign.Value>
-                </Assign>
+                <Sequence DisplayName="Sequence - Unsuccessful" sap:VirtualizedContainerService.HintSize="400,335.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Assign - Processs Unsuccessful" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[out_Success]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:LogMessage DisplayName="Log Message - FT" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;First Tab Unsuccessful&quot;]" />
+                </Sequence>
               </If.Then>
             </If>
           </Sequence>

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1000.8,1724.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1099.2,2139.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OpenRevisalApplication_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -105,28 +105,28 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This process opens the Revisal act and navigates to the 'Inregistrare salariat' area." DisplayName="OpenRevisalApplication" sap:VirtualizedContainerService.HintSize="1011.2,1660" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This process opens the Revisal act and navigates to the 'Inregistrare salariat' area." DisplayName="OpenRevisalApplication" sap:VirtualizedContainerService.HintSize="1011.2,2074.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="948.8,1505.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="03d3afac-df84-444b-9b12-cbdd79968f3c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: ReviSal - versiunea 6.0.9.0" sap:VirtualizedContainerService.HintSize="948.8,1920" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="03d3afac-df84-444b-9b12-cbdd79968f3c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Navigate to 'Inregistrare salariat'" sap:VirtualizedContainerService.HintSize="915.2,1204.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Navigate to 'Inregistrare salariat'" sap:VirtualizedContainerService.HintSize="915.2,1619.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check if 'Salarati' Button Exists" sap:VirtualizedContainerService.HintSize="852.8,520" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="03d3afac-df84-444b-9b12-cbdd79968f3c" Timeout="[1s]" Version="V3">
+            <uix:NCheckState DisplayName="Check if 'Salarati' Button Exists" sap:VirtualizedContainerService.HintSize="852.8,656" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="03d3afac-df84-444b-9b12-cbdd79968f3c" Timeout="[1s]" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,292" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Target appears (1)" sap:VirtualizedContainerService.HintSize="400,292" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,7 +140,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,285.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target does not appear (1)" sap:VirtualizedContainerService.HintSize="400,428" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,15 +151,16 @@
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                     </ui:SendOutlookMail.Files>
                   </ui:SendOutlookMail>
+                  <ui:LogMessage DisplayName="Log Message - Application Failure (1)" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Error with opening application&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="205, 41, 83, 33" DesignTimeScaleFactor="1.25" ElementType="TabPage" FriendlyName="'Salariati'" FullSelectorArgument="&lt;ctrl automationid='TabControl' /&gt;&lt;ctrl name='Salariati' role='page tab' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='TabControl' /&gt;&lt;ctrl name='Salariati' role='page tab' automationid='' check:text='Salariati' /&gt;" Guid="bd73ee15-8041-43e5-9826-d17f3d339241" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAlCAYAAAA3InWmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJBSURBVGhD7Za/L0NRFMfvHyEhYTCaxCRW/4BYDNJBmEQiGMxMBovFKBJhsElMEgOJSdTAIlKiIVJKtKWl2vJ17319v9rb11ecSOW85DO8d+59vedzzz194in7DoYGsRcDGBpYLiEslxCWSwjLJYTlEsJyCWG5hLBcQlguISyXEJZLCMslhOUSQiT3CUujnRBClGnHwGrSMM7P9sYM2rqXsW6I1WNzoR/iD+YGQSA3jtk+ga65c/dZdA/TS577GvxEbnisjfetj4jflytFDnX0YmrXEKsDy62LoXINcadltI5j8dCKVcrVx9XUWsobODIvx8tYy/AO1kPNrfhtYRUB1abS9FydvLt4X2x/BYOOeP9G+JOUsUiFLDtWfr+SulWOh55rqNzmkmsjRfaoCglYuErclhSYpHqXXeWG1hN67r+Rq7GScavMunePpluBlUnqe884p4WEkFtz7v+S6118dWK1Krcq4QYqN3BuU8uViY9Nur3QX7mqx3q/ea2ea5Lrla7G6r4ZUm7g3OauXEuYcxwl3kR1Ik6sF4ORGj1XC3Tf0RWZCN9zg+aquP1f0JRfC4yG5RLCcgkRa/t3YGgQmwe3YGgQD88FMDSwXELE5d0rkhlzMH7/itP4M44vM4heMI0ilLhYIlcl9kqKjcrY+W0WN49vzDcQD5l3nN28IJ0rIiml2pzIilXSC6VP8PW9SyRSeX30Sx+fPrnRizRS2SLyxQ+kpHimccS1LF/VGtTllXsUSyOXL+lB3udMWAr4AoY5TZe625CZAAAAAElFTkSuQmCC" InformativeScreenshot="7cffb455a8bc6ada1bd4898b79a7d6f2.png" ScopeSelectorArgument="&lt;wnd app='teamnet.revisal.ui.exe' cls='HwndWrapper*' title='ReviSal - versiunea 6.0.9.0' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'Inregistrare'" sap:VirtualizedContainerService.HintSize="852.8,520" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="03d3afac-df84-444b-9b12-cbdd79968f3c" Timeout="[1s]" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Inregistrare'" sap:VirtualizedContainerService.HintSize="852.8,798.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="03d3afac-df84-444b-9b12-cbdd79968f3c" Timeout="[1s]" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,292" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target appears (2)" sap:VirtualizedContainerService.HintSize="400,292" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,7 +174,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,285.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Target does not appear (2)" sap:VirtualizedContainerService.HintSize="400,570.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -184,6 +185,8 @@
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                     </ui:SendOutlookMail.Files>
                   </ui:SendOutlookMail>
+                  <ui:LogMessage DisplayName="Log Message - Application Failure (2)" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Error with opening application&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message - Application Failure" sap:VirtualizedContainerService.HintSize="337.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Error with opening application&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
